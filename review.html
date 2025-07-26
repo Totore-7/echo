@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review - Réseau Culturel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .review-form {
+      max-width: 500px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .review-form input, .review-form textarea, .review-form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .stars {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    .stars input {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Réseau Culturel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="review.html">Review</a>
+      <a href="list.html">List</a>
+      <a href="profile.html">Profil</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Laissez une critique</h2>
+    <form class="review-form">
+      <label for="title">Titre de l'œuvre</label>
+      <input type="text" id="title" name="title" placeholder="Ex: Interstellar" required />
+
+      <label for="review">Votre avis</label>
+      <textarea id="review" name="review" rows="5" placeholder="Partagez votre opinion..." required></textarea>
+
+      <label>Note</label>
+      <div class="stars">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+      </div>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+
+  <script>
+    document.querySelector('.review-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Critique envoyée ! (fonctionnalité à implémenter)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

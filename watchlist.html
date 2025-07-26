@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watchlist - Réseau Culturel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Réseau Culturel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="review.html">Review</a>
+      <a href="list.html">List</a>
+      <a href="profile.html">Profil</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Ma Watchlist Culturelle</h2>
+    <form id="addForm">
+      <input type="text" id="title" placeholder="Titre de l'œuvre" required>
+      <select id="category" required>
+        <option value="">-- Catégorie --</option>
+        <option value="film">Film</option>
+        <option value="série">Série</option>
+        <option value="livre">Livre</option>
+        <option value="jeu">Jeu vidéo</option>
+        <option value="album">Album musical</option>
+        <option value="autre">Autre</option>
+      </select>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <ul id="watchlist"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
